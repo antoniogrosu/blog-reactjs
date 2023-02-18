@@ -5,3 +5,6 @@
 .lato {
   font-family: Lato;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
