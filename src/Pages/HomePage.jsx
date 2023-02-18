@@ -24,7 +24,6 @@ export default function HomePage() {
       <h1 className="text-3xl lato font-semibold text-brown mb-8">
         Ultima Postare
       </h1>
-      <Card title={posts[1].title} dom={posts[1].domeniu} />
     </>
   );
 }
