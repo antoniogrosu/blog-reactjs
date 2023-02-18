@@ -1,17 +1,20 @@
 import Logo from "/Logo.svg";
 import { Link } from "react-router-dom";
+import MenuButton from "./MenuButton";
 export default function Navbar() {
   return (
-    <nav className="w-full bg-brown flex justify-between items-center">
+    <nav className="w-full bg-brown flex items-center justify-between md:px-20">
       <Link to="/" className="w-4/12">
         <div className="w-full">
           <img src={Logo} className="4/12"></img>
         </div>
       </Link>
-      <div className="grid columns-1 gap-2 items-center w-1/8 mr-4">
-        <div className="bg-orange-200 py-0.5 w-10 rounded-3xl"></div>
-        <div className="bg-orange-200 py-0.5 w-10 rounded-3xl"></div>
-        <div className="bg-orange-200 py-0.5 w-10 rounded-3xl"></div>
+      <div className="md:hidden">
+        <MenuButton />
+      </div>
+      <div className=" hidden md:mr-4 md:lato md:text-orange-200 md:font-semibold md:flex md:items-center md:justify-between md:w-2/12 md:text-lg">
+        <Link to="/blog">Blog</Link>
+        <Link to="/admin">Admin</Link>
       </div>
     </nav>
   );

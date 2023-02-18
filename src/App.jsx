@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="bg-orange-200 px-4 py-20">
+      <div className="bg-orange-200 px-4 py-20 md:px-24 md:py-20">
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/blog" element={<BlogPage />} />
