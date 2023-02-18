@@ -3,6 +3,7 @@ import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer";
 import BlogPage from "./Pages/BlogPage";
 import Navbar from "./Components/Navbar";
+import AdminPage from "./Pages/AdminPage";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/blog" element={<BlogPage />} />
+          <Route exact path="/admin" element={<AdminPage />} />
         </Routes>
       </div>
       <Footer />
