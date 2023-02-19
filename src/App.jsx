@@ -4,6 +4,8 @@ import Footer from "./Components/Footer";
 import BlogPage from "./Pages/BlogPage";
 import Navbar from "./Components/Navbar";
 import AdminPage from "./Pages/AdminPage";
+import PostPage from "./Pages/PostPage";
+
 function App() {
   return (
     <>
@@ -11,8 +13,9 @@ function App() {
       <div className="bg-orange-200 px-4 py-20 md:px-24 md:py-20">
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/blog" element={<BlogPage />} />
-          <Route exact path="/admin" element={<AdminPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slang" element={<PostPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </div>
       <Footer />

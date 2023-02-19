@@ -21,7 +21,14 @@ export default function BlogPage() {
       </h1>
       <div className="grid columns-1 gap-10">
         {posts.map((post) => {
-          return <Card title={post.title} dom={post.domeniu} key={post.id} />;
+          return (
+            <Card
+              title={post.title}
+              type={post.type}
+              key={post.id}
+              slang={post.slang}
+            />
+          );
         })}
       </div>
     </>

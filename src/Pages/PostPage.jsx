@@ -1,13 +1,12 @@
-import Hero from "../Components/Hero";
-import Card from "../Components/Card";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { db } from "/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import Post from "../Components/Post";
 
-export default function HomePage() {
+export default function PostPage() {
+  const { slang } = useParams();
   const [posts, setPosts] = useState([]);
-  const [count, setCount] = useState(0);
   useEffect(() => {
     const postsCollectionRef = collection(db, "blog posts");
     const getPosts = async () => {
@@ -15,11 +14,15 @@ export default function HomePage() {
       setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getPosts();
-    setCount(posts.length - 1);
   }, []);
+  const index = posts.findIndex((item) => item.slang === slang);
   return (
     <>
-      <Hero />
+      {index != -1 ? (
+        <Post title={posts[index].title} content={posts[index].content} />
+      ) : (
+        <h1>Post not found</h1>
+      )}
     </>
   );
 }
