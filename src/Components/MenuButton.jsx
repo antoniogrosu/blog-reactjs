@@ -1,5 +1,6 @@
 import { Menu } from "@headlessui/react";
 import { Link } from "react-router-dom";
+
 function MyDropdown() {
   return (
     <Menu>
@@ -11,13 +12,6 @@ function MyDropdown() {
           {({ active }) => (
             <Link className={`${active && "bg-blue-500"}`} to="/blog">
               Blog Nostru{" "}
-            </Link>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <Link className={`${active && "bg-blue-500"}`} to="/admin">
-              Admin
             </Link>
           )}
         </Menu.Item>
