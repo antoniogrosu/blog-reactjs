@@ -40,7 +40,7 @@ export default function AdminPage() {
       <div>
         <button
           onClick={handleSignOut}
-          className="text-brown bg-gray-50 font-bold border-4 border-brown rounded-lg mt-4 px-6 py-2"
+          className="text-brown bg-gray-50 font-bold border-2 border-brown rounded-lg mt-4 px-4 py-1 text-sm"
         >
           {" "}
           Log out
@@ -56,9 +56,9 @@ export default function AdminPage() {
     );
   }
   return (
-    <>
+    <div className="h-screen">
       <h1 className="lato font-semibold text-3xl text-brown">Admin Page</h1>
       {content}{" "}
-    </>
+    </div>
   );
 }

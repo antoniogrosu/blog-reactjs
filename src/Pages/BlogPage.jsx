@@ -19,7 +19,7 @@ export default function BlogPage() {
       <h1 className="text-brown text-3xl lato font-semibold mb-14">
         Blogul TeenPsychology
       </h1>
-      <div className="grid columns-1 gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {posts.map((post) => {
           return (
             <Card

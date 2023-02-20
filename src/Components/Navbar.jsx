@@ -13,8 +13,12 @@ export default function Navbar() {
       <div className="md:hidden">
         <MenuButton />
       </div>
-      <div className=" hidden md:mr-4 md:lato md:text-orange-200 md:font-semibold md:flex md:items-center md:justify-between md:text-lg">
-        <Link to="/blog">Blogul TeenPsychology</Link>
+      <div className=" hidden md:mr-4 md:lato md:text-gray-50 md:font-semibold md:flex md:items-center md:justify-between md:text-sm">
+        <Link to="/blog">
+          <button className="border-2 border-gray-50 bg-gray-100 bg-opacity-0 hover:bg-opacity-40 px-2 text-gray-50 rounded-lg py-1">
+            Viziteaza Blogul
+          </button>
+        </Link>
       </div>
     </nav>
   );
