@@ -19,10 +19,11 @@ export default function BlogPage() {
       <h1 className="text-brown text-3xl lato font-semibold mb-14">
         Blogul TeenPsychology
       </h1>
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
         {posts.map((post) => {
           return (
             <Card
+              img={post.img}
               title={post.title}
               type={post.type}
               key={post.id}

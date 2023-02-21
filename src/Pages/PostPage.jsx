@@ -19,7 +19,12 @@ export default function PostPage() {
   return (
     <>
       {index != -1 ? (
-        <Post title={posts[index].title} content={posts[index].content} />
+        <Post
+          title={posts[index].title}
+          img={posts[index].img}
+          content={posts[index].content}
+          key={posts[index].id}
+        />
       ) : (
         <h1>Post not found</h1>
       )}

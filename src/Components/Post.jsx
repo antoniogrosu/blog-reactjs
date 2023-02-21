@@ -5,6 +5,7 @@ export default function Post(props) {
   return (
     <div>
       <h1 className="text-3xl lato text-brown font-semibold">{props.title}</h1>
+      <img src={props.img} className="w-full mt-8 rounded-3xl"></img>
       {content}
     </div>
   );
