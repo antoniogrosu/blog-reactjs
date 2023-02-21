@@ -2,13 +2,21 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
+const API_KEY = import.meta.env.VITE_API_KEY;
+const AUTH_DOMAIN = import.meta.env.VITE_AUTH_DOMAIN;
+const PROJECT_ID = import.meta.env.VITE_PROJECT_ID;
+const STORAGE_BUCKET = import.meta.env.VITE_STORAGE_BUCKET;
+const MESSAGING_SENDER_ID = import.meta.env.VITE_MESSAGING_SENDER_ID;
+const APP_ID = import.meta.env.VITE_APP_ID;
+
+console.log(import.meta.env.REACT_API_KEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyCVlgIIdD0BPmrLKTICHAd6twfHsjw8kqM",
-  authDomain: "blog-cms-project.firebaseapp.com",
-  projectId: "blog-cms-project",
-  storageBucket: "blog-cms-project.appspot.com",
-  messagingSenderId: "237382012099",
-  appId: "1:237382012099:web:b7c5da18d88baa25f1e676",
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
