@@ -14,7 +14,7 @@ export default function CreatePost() {
   const [post, setPost] = useState({});
   //write in db
 
-  const collectionRef = collection(db, "blog posts");
+  const collectionRef = collection(db, "blogPage");
   const createPost = async () => {
     await addDoc(collectionRef, post);
   };

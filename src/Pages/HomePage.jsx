@@ -16,16 +16,12 @@ export default function HomePage() {
       setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getPosts();
-    setCount(posts.length - 1);
+    setCount((num) => posts.length - 1);
   }, []);
-  const [titleDYK, setTitleDYK] = useState("");
-  const [textDYK, setTextDYK] = useState("");
-  console.log(posts[count]);
   return (
     <>
       <Hero />
       <div className="my-6"></div>
-      <DidYouKnow />
     </>
   );
 }
