@@ -5,17 +5,10 @@
   },
   "hosting": {
     "public": "public",
-    "site": "teen-psychology",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
