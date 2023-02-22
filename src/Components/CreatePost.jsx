@@ -10,6 +10,7 @@ export default function CreatePost() {
   const [newAuthor, setNewAuthor] = useState("");
   const [newSlang, setNewSlang] = useState("");
   const [newParagraph, setNewParagraph] = useState("");
+  const [newShort, setNewShort] = useState("");
   const [newParArr, setNewParArr] = useState([]);
   const [post, setPost] = useState({});
   //write in db
@@ -30,6 +31,7 @@ export default function CreatePost() {
       content: newParArr,
       img: newImg,
       type: newDom,
+      short: newShort,
     }));
   }
   return (

@@ -11,7 +11,7 @@ export default function PostPage() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const postsCollectionRef = collection(db, "blog posts");
+    const postsCollectionRef = collection(db, "blogPage");
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
