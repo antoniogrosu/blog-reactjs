@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
-import { db } from "/firebaseConfig";
-import { addDoc, collection } from "firebase/firestore";
 import { auth } from "/firebaseConfig";
 import { UserAuth } from "../../authContext";
 import AdminComponent from "../Components/AdminComponent";
 import { GoogleAuthProvider } from "firebase/auth";
 import GoogleButton from "react-google-button";
+import FormComponent from "../Components/FormComponent";
 
 export default function AdminPage() {
-  //import the db to write posts
-  const [posts, setPosts] = useState([]);
-  const [newTitle, setNewTitle] = useState("");
-  const [newDom, setNewDom] = useState("");
-  const collectionRef = collection(db, "blog posts");
-  const createPost = async () => {
-    await addDoc(collectionRef, { title: newTitle, domeniu: newDom });
-  };
-
   // import the user from context api
   const { user, googleSignIn, logOut } = UserAuth();
   async function handleGoogleSignIn() {
@@ -55,10 +45,12 @@ export default function AdminPage() {
       </div>
     );
   }
+
   return (
-    <div className="h-screen">
+    <div>
       <h1 className="lato font-semibold text-3xl text-brown">Admin Page</h1>
-      {content}{" "}
+      {content}
+      <FormComponent />
     </div>
   );
 }
