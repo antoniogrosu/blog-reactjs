@@ -50,7 +50,6 @@ export default function AdminPage() {
     <div>
       <h1 className="lato font-semibold text-3xl text-brown">Admin Page</h1>
       {content}
-      <FormComponent />
     </div>
   );
 }
