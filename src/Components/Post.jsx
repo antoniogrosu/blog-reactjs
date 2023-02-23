@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { Helmet } from "react-helmet";
 export default function Post(props) {
   const date = new Date();
   const imgHref = `${props.img}`;
