@@ -1,5 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Helmet } from "react-helmet";
 
 export default function Post(props) {
   const date = new Date();
@@ -10,11 +9,7 @@ export default function Post(props) {
   });
   return (
     <>
-      <Helmet
-        title={props.title}
-        meta={{ name: `description`, content: { descriptionContent } }}
-        link={{ rel: `apple-touch-icon`, href: { imgHref } }}
-      />
+      <Helmet title={props.title} />
       <div>
         <h1 className="text-3xl lato text-brown font-semibold">
           {props.title}

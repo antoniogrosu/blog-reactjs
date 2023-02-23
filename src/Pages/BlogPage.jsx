@@ -20,11 +20,7 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>Teen Psychology Blog</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/webclip.png" />
       </Helmet>
       {!loaded && <MyLoader />}
       {loaded && (
