@@ -4,6 +4,7 @@ import { db } from "/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import Post from "../Components/Post";
 import MyLoader from "../Components/MyLoader";
+import { Helmet } from "react-helmet";
 
 export default function PostPage() {
   const { slang } = useParams();
