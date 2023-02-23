@@ -15,7 +15,10 @@ export default function HomePage() {
       </Helmet>
       <Hero />
       <div className="my-10 p-1"></div>
-      <DidYouKnow title="Stiati ca ?" text="" />
+      <DidYouKnow
+        title="Stiati ca ?"
+        text="Fluturii din stomac pe care ii simțim atunci când ne îndrăgostim sunt de fapt niște semnale pe care corpul ni le arată pentru a ne putea proteja de vreun trigger in legătura cu trauma noastră?"
+      />
     </>
   );
 }
