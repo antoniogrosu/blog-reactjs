@@ -10,14 +10,11 @@ export default function Post(props) {
   });
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{props.title}</title>
-        <meta name="description" content={descriptionContent} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href={imgHref} />
-      </Helmet>
+      <Helmet
+        title={props.title}
+        meta={{ name: `description`, content: { descriptionContent } }}
+        link={{ rel: `apple-touch-icon`, href: { imgHref } }}
+      />
       <div>
         <h1 className="text-3xl lato text-brown font-semibold">
           {props.title}
