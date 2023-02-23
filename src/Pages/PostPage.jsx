@@ -9,7 +9,6 @@ export default function PostPage() {
   const { slang } = useParams();
   const [posts, setPosts] = useState([]);
   const [loaded, setLoaded] = useState(false);
-
   useEffect(() => {
     const postsCollectionRef = collection(db, "blogPage");
     const getPosts = async () => {
@@ -26,6 +25,8 @@ export default function PostPage() {
       <div>
         {index != -1 ? (
           <Post
+            short={posts[index].short}
+            author={posts[index].author}
             title={posts[index].title}
             img={posts[index].img}
             content={posts[index].content}

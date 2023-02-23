@@ -53,6 +53,17 @@ export default function CreatePost() {
             }}
           />
           <label className="ml-2 text-gray-50 font-bold lato text-lg capitalize">
+            Short Descriere cateva cuvinte{" "}
+          </label>
+          <input
+            type="text"
+            placeholder="Descriere"
+            className="mt-1 mb-6 indent-4 w-full h-12 rounded-2xl"
+            onChange={() => {
+              setNewShort(event.target.value);
+            }}
+          />
+          <label className="ml-2 text-gray-50 font-bold lato text-lg capitalize">
             Autor{" "}
           </label>
           <input

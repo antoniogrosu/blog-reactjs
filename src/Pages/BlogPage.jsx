@@ -3,6 +3,7 @@ import Card from "../Components/Card";
 import { db } from "/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import MyLoader from "../Components/MyLoader";
+import { Helmet } from "react-helmet";
 
 export default function BlogPage() {
   const [posts, setPosts] = useState([]);
@@ -12,14 +13,19 @@ export default function BlogPage() {
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      getPosts();
       setLoaded(true);
     };
     getPosts();
   }, []);
-
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Teen Psychology Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/webclip.png" />
+      </Helmet>
       {!loaded && <MyLoader />}
       {loaded && (
         <h1 className="text-brown text-3xl lato font-semibold mb-14">
